@@ -6,6 +6,7 @@ COPY . .
 RUN npm run build
 
 #Stage 2: Serve production
+#Hello
 FROM nginx:alpine
 COPY --from=build /practicedf/dist /usr/share/nginx/html
 EXPOSE 80
