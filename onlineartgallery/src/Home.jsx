@@ -7,7 +7,7 @@ export default function Home() {
 
   const fetchArts = async () => {
     try {
-      const res = await fetch(`${config.url}/art/`);
+      const res = await fetch(`${config.url}/artapi/`);
       const data = await res.text(); 
       setArts(data);
     } catch (error) {

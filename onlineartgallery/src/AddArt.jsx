@@ -40,7 +40,7 @@ export default function AddArt() {
         const art = { artname, price: parseInt(price), category };
 
         try {
-            const res = await fetch(`${config.url}/art/add`, {
+            const res = await fetch(`${config.url}/artapi/add`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(art)

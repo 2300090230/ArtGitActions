@@ -9,7 +9,7 @@ export default function ViewArt() {
   // Fetch all arts
   const fetchArts = async () => {
     try {
-      const res = await fetch(`${config.url}/art/view`);
+      const res = await fetch(`${config.url}/artapi/view`);
       const data = await res.json();
       setArts(data);
     } catch (error) {
@@ -22,7 +22,7 @@ export default function ViewArt() {
   // Delete art
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`${config.url}/art/delete/${id}`, { method: 'DELETE' });
+      const res = await fetch(`${config.url}/artapi/delete/${id}`, { method: 'DELETE' });
       if (res.ok) setArts(arts.filter((art) => art.id !== id));
     } catch (error) {
       console.error(error);
@@ -33,7 +33,7 @@ export default function ViewArt() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${config.url}/art/update`, {
+      const res = await fetch(`${config.url}/artapi/update`, {
         method: 'PUT', // or POST depending on your backend
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editArt),
