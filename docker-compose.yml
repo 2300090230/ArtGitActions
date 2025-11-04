@@ -16,7 +16,7 @@ services:
     image: 2300090230/docker-artbackend:latest
     container_name: springboot
     ports:
-      - "2025:3020"
+      - "30025:3020"
     depends_on:
       - mysqldb
     restart: on-failure
@@ -27,7 +27,7 @@ services:
     image: 2300090230/docker-artfrontend:latest
     container_name: react
     ports:
-      - "3000:80"
+      - "30080:80"
     depends_on:
       - backend
     restart: on-failure
