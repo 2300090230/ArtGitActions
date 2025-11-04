@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
-@RequestMapping("/art")
+@RequestMapping("/artapi")
 @CrossOrigin(origins = "*") // allows frontend requests
 public class ArtController {
 
